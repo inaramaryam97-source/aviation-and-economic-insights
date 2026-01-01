@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malaysia Aviation & Economic Insights</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-gold: #d4af37;
+            --navy-blue: #001f3f;
+            --elegant-white: #f5f5f5;
+            --shadow: rgba(0, 31, 63, 0.2);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: linear-gradient(to bottom, var(--navy-blue) 0%, #003366 100%);
+            color: var(--elegant-white);
+            font-family: 'Roboto', sans-serif;
+            overflow: hidden;
+            position: relative;
+            min-height: 100vh;
+        }
+        header {
+            background: rgba(0, 31, 63, 0.8);
+            backdrop-filter: blur(12px);
+            padding: 1.5rem;
+            text-align: center;
+            position: relative;
+            z-index: 20;
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.2rem;
+            color: var(--primary-gold);
+            text-shadow: 0 2px 10px var(--shadow);
+        }
+        nav a {
+            color: var(--elegant-white);
+            margin: 0 1.5rem;
+            text-decoration: none;
+            font-weight: 400;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+        nav a:hover {
+            color: var(--primary-gold);
+            text-shadow: 0 0 10px var(--primary-gold);
+        }
+        .hero {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .carousel {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        .carousel img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.4;
+            position: absolute;
+            animation: morph-bg 20s infinite ease-in-out;
+        }
+        main {
+            padding: 4rem 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 10;
+            text-align: center;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 15px;
+            padding: 3rem;
+            box-shadow: 0 10px 40px var(--shadow);
+            animation: subtle-pulse 5s infinite ease-in-out;
+        }
+        h2 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-gold);
+            margin-bottom: 1.5rem;
+        }
+        p {
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+        footer {
+            background: rgba(0, 31, 63, 0.8);
+            color: #ccc;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            backdrop-filter: blur(12px);
+            z-index: 20;
+        }
+        /* Moving Jet Animation */
+        .jet {
+            position: absolute;
+            top: 40%;
+            left: -10%;
+            width: 200px;
+            height: auto;
+            z-index: 5;
+            animation: fly-jet 30s linear infinite;
+            transform: rotate(-15deg);
+        }
+        @keyframes fly-jet {
+            0% { left: -15%; top: 40%; transform: rotate(-15deg) scale(0.8); opacity: 0.6; }
+            50% { left: 50%; top: 30%; transform: rotate(0deg) scale(1); opacity: 1; }
+            100% { left: 115%; top: 20%; transform: rotate(15deg) scale(0.8); opacity: 0.6; }
+        }
+        /* Morph Background (Subtle Shape Morph via Scale/Opacity) */
+        @keyframes morph-bg {
+            0% { transform: scale(1) rotate(0deg); opacity: 0.4; }
+            50% { transform: scale(1.05) rotate(2deg); opacity: 0.6; }
+            100% { transform: scale(1) rotate(0deg); opacity: 0.4; }
+        }
+        /* Subtle Pulse for Card */
+        @keyframes subtle-pulse {
+            0%, 100% { box-shadow: 0 10px 40px var(--shadow); }
+            50% { box-shadow: 0 15px 60px rgba(212, 175, 55, 0.3); }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="carousel">
+            <!-- Background image with morph effect -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/View_Over_KLIA2.jpg/1280px-View_Over_KLIA2.jpg" alt="Kuala Lumpur International Airport">
+        </div>
+        <!-- Moving Private Jet -->
+        <img class="jet" src="https://upload.wikimedia.org/wikipedia/commons/7/7f/Private_jet_icon.svg" alt="Moving Private Jet">
+    </section>
+
+    <header>
+        <h1>Malaysia Aviation & Economic Insights</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="blog.html">Blog Posts</a>
+            <a href="data.html">Data Visuals</a>
+            <a href="policy.html">Policy Briefs</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="glass-card">
+            <h2>Welcome to Elegant Insights</h2>
+            <p>Discover the sophisticated interplay of aviation and Malaysia's economy in 2026. From GDP impacts to regional growth, explore data-driven analyses amid a backdrop of luxury and innovation.</p>
+            <p>With Visit Malaysia Year underway, witness how aviation propels tourism and trade forward—elegantly blending conglomerate perspectives with forward-thinking policy briefs.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 Malaysia Aviation & Economic Insights. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // No JS needed for these pure CSS animations – keeps it classy and performant!
+    </script>
+</body>
+</html>
